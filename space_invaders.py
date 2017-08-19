@@ -38,9 +38,14 @@ def move_left():
     x = player.xcor()
     x -= playerspeed
     player.setx(x)
-
+    
+def move_right():
+    x = player.xcor()
+    x += playerspeed
+    player.setx(x)
+    
 #create keyboard binding
 turtle.listen()
 turtle.onkey(move_left, "Left")
-
+turtle.onkey(move_right, "Right")
 

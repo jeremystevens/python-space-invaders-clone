@@ -3,9 +3,16 @@ import turtle
 import os
 import math
 import random
-import winsound
+# sound for linux
+# get os type to determine if we are on a windows or linunx machine 
+#
 global op
 op = os.name
+if op == 'nt':
+	op = 'win'
+else:
+	op = 'lin'
+	# sound library for linux not pygame 
 
 #Set up the screen
 wn = turtle.Screen()
